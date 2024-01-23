@@ -1,37 +1,48 @@
-import tkinter
+import tkinter as tk
 import string
 import random
 import pyperclip
-from tkinter import messagebox
 
-ventana = tkinter.Tk()
-ventana.title("Generador")
-ventana.geometry("250x160")
-ventana.resizable(0,0)
+class Generador():
+    
+    def __init__(self,ventana):
+        self.ventana = ventana
+        self.ventana.title("Generador contraseñas")
+        self.ventana.geometry("300x200")
+        self.ventana.resizable(0,0)
 
-caracteres = list(string.ascii_letters + string.digits + "!#@&%$()/+*-")
-longitud = tkinter.IntVar()
+        self.longitud = tk.IntVar()
+        self.longitud.set("")
+        self.contrasena = tk.StringVar()
 
-def generar():
-    random.shuffle(caracteres)
+        lbl_mensaje = tk.Label(self.ventana,text="Longitud de la contraseña",font=("Arial",12,"bold"))
+        lbl_mensaje.pack(pady=10)
 
-    password = []
-    for i in range(longitud.get()):
-        password.append(random.choice(caracteres))
+        txt_longitud = tk.Entry(self.ventana,textvariable=self.longitud,font=("Arial",11))
+        txt_longitud.pack()
+        txt_longitud.focus()
 
-    random.shuffle(password)
+        lbl_generada2 = tk.Label(self.ventana,text="Contraseña generada",font=("Arial",12,"bold"))
+        lbl_generada2.pack(pady=10)
 
-    lblGenerada.configure(text="Contraseña: "+"".join(password))
-    pyperclip.copy("".join(password))
-    messagebox.showinfo(message="Contraseña copiada al portapeles", title="Generador") 
+        lbl_generada = tk.Label(self.ventana,textvariable=self.contrasena,font=("Arial",11))
+        lbl_generada.pack()
 
-lblMensaje = tkinter.Label(ventana,text="Longitud de la contraseña")
-lblMensaje.pack(pady=10)
+        btn_generar = tk.Button(self.ventana,text="Generar",command=self.generar_contrasena,font=("Arial",12,"bold"))
+        btn_generar.pack(padx=30,side="left")
 
-txtLongitud = tkinter.Entry(ventana,textvariable=longitud).pack()
+        btn_copiar = tk.Button(self.ventana,text="Copiar",command=self.copiar_contrasena,font=("Arial",12,"bold"))
+        btn_copiar.pack(padx=30,side="right")
+     
+    def generar_contrasena(self):
+        longi = int(self.longitud.get())
+        caracteres = string.ascii_letters + string.digits + string.punctuation
+        contra = ''.join(random.choice(caracteres) for i in range(longi))
+        self.contrasena.set(contra)
 
-btnGenerar = tkinter.Button(ventana,text="Generar",command=generar).pack(pady=15)
-lblGenerada = tkinter.Label(ventana,text="Contraseña: ")
-lblGenerada.pack()
+    def copiar_contrasena(self):
+        pyperclip.copy(self.contrasena.get())       
 
+ventana = tk.Tk()
+aplicacion = Generador(ventana)
 ventana.mainloop()
