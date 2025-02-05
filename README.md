@@ -1,27 +1,32 @@
 # Generador de contraseñas
 
 ## Descripción
-Una aplicación que permite generar contraseñas de forma aleatoria y permite que el usuario ingrese la longitud deseada.
+Una aplicación que genera contraseñas de forma aleatoria y permite que el usuario ingrese la longitud deseada.
 
 ## Capturas de pantalla
-![image](https://github.com/MixDark/GeneradorClaves/assets/151795541/088a9a5b-c4ee-4317-bd49-aeb60404f797)
+![image](https://github.com/user-attachments/assets/8ccdb267-0fc3-4bb7-ad52-6f147b708a57)
 
-![image](https://github.com/MixDark/GeneradorClaves/assets/151795541/d6460384-d6f1-4163-b577-26cf98d9e70d)
+![image](https://github.com/user-attachments/assets/1e17b1c7-edd6-4349-ab19-c287d9775bcd)
 
-![image](https://github.com/MixDark/GeneradorClaves/assets/151795541/7662cf4c-35fe-4153-a6a9-501110f12e0e)
+![image](https://github.com/user-attachments/assets/999bac2a-3ba3-4c7c-a22d-352e3654f2fa)
+
+![image](https://github.com/user-attachments/assets/96b548bc-a988-4f98-82c2-3674d546779b)
 
 ## Características
 - Generador contraseñas aleatorias
+- Opciones de personalización
 - Permite copiar la contraseña al portapeles
+- Tema claro y oscuro
 - Interfaz simple e intuitiva
 
 ## Tecnologías utilizadas
 - Python 3.x
-- Tkinter
-- Pyperclip
+- PyQt6
 
 ## Requerimientos
-- Python 3.x 
+- Python 3.x
+- PyQt6
+- Pyperclip
 
 ## Instalación desde CLI
 1. Clona el repositorio: 
@@ -33,9 +38,11 @@ python InterfazGrafica.py
 
 ## Uso
 1. Ingresa la longitud de la contraseña
-2. Haz clic en "Generar" para iniciar el proceso.
-3. Haz clic en "Copiar" para que quede en el portapapeles.
+2. Marca las opciones de personalización que desees
+3. Haz clic en "Generar" para iniciar el proceso.
+4. Haz clic en "Copiar" para que almacenarla en el portapapeles.
 
-## Estructura del proyecto:
+## Estructura del proyecto
 
-![image](https://github.com/user-attachments/assets/3bc4a69d-cfda-413b-8cac-76680fd1863c)
+![image](https://github.com/user-attachments/assets/2a5caa73-0e06-464e-ba9b-a723184260f3)
+
