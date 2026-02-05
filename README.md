@@ -1,4 +1,4 @@
-# Generador de Contraseñas Pro
+# Generador de contraseñas
 
 Una aplicación de escritorio moderna para generar contraseñas seguras con análisis de fortaleza en tiempo real.
 
@@ -73,7 +73,7 @@ python InterfazGrafica.py
 4. **Copiar** - Usa el ojo para mostrar/ocultar, luego copia al portapapeles
 5. **Exportar** - Guarda el historial como JSON
 
-## Atajos de Teclado
+## Atajos de teclado
 
 | Atajo | Función |
 |-------|---------|
@@ -82,7 +82,7 @@ python InterfazGrafica.py
 | `Ctrl+H` | Mostrar/ocultar contraseña |
 | `Ctrl+E` | Exportar historial |
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 ```
 Generador contraseñas/
@@ -96,7 +96,7 @@ Generador contraseñas/
 └── __pycache__/               # Caché de Python (ignorado)
 ```
 
-## Funcionalidades Principales
+## Funcionalidades principales
 
 ### GeneradorContraseñas.py
 Motor de contraseñas con:
@@ -118,45 +118,45 @@ Estilos CSS combinados:
 - Tema oscuro (#1e1e1e)
 - Configuraciones de colores coherentes
 
-## Configuración de Caracteres
+## Configuración de caracteres
 
 ### Presets
 - **Débil**: Solo letras minúsculas y números
 - **Medio**: Letras mayúsculas, minúsculas y números
 - **Fuerte**: Todo incluido (caracteres especiales)
 
-### Tipos de Caracteres Especiales
+### Tipos de caracteres especiales
 - **Básico**: `!@#$%`
 - **Expandido**: `!@#$%^&*()_+-=[]{}|;:'",.<>?/`
 - **Estricto**: Solo caracteres seguros: `!#$%&*+-.=?^_|~`
 
-## Análisis de Seguridad
+## Análisis de seguridad
 
 La aplicación calcula:
 - **Entropía**: Medida en bits de la aleatoriedad
 - **Fortaleza**: Basada en complejidad y longitud
 - **Tiempo de Crack**: Estimado con diccionarios y GPU estándar
 
-### Niveles de Fortaleza
+### Niveles de fortaleza
 - 🔴 Débil (< 40 bits)
 - 🟡 Medio (40-59 bits)
 - 🟢 Fuerte (≥ 60 bits)
 
 ## Temas
 
-### Tema Claro
+### Tema claro
 Paleta gris azulada para uso diurno:
 - Fondo: #dce4f0
 - Campos de entrada: #e8eef5
 - Acentos: #1a73e8 (azul)
 
-### Tema Oscuro
+### Tema oscuro
 Paleta oscura para uso nocturno:
 - Fondo: #1e1e1e
 - Campos de entrada: #2d2d2d
 - Acentos: #64b5f6 (azul claro)
 
-## Notas Técnicas
+## Notas técnicas
 
 - **Generación de aleatoriedad**: Usa `secrets` module de Python
 - **Clipboard**: Integración con pyperclip
